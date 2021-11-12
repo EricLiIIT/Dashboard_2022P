@@ -59,7 +59,7 @@ public class PageRecord extends FragmentStateAdapter {
             @NonNull
             @Override
             public State getCurrentState() {
-                return null;
+                return State.STARTED;
             }
         });
 
