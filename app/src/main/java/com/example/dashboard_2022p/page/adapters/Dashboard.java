@@ -21,7 +21,7 @@ public class Dashboard extends com.example.dashboard_2022p.page.Page {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @
             Nullable Bundle SavedInstanceState) {
-        rootView = (ViewGroup) inflater.inflate(R.layout.activity_main, container, false);
+        rootView = (ViewGroup) inflater.inflate(R.layout.dashboard, container, false);
         return rootView;
     }
 }

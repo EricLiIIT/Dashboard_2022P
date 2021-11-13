@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide(); // Removes top bar
-//        viewPager2 = findViewById(R.id.mainPage);
+        viewPager2 = findViewById(R.id.mainPage);
 
         // Initialization
         pageAdapter = new PageAdapter(this);

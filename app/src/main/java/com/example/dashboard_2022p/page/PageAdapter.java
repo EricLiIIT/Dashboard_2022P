@@ -21,7 +21,7 @@ public class PageAdapter {
         pageRecord = new PageRecord(activity.getSupportFragmentManager());
 
         tabs.removeAllTabs();
-        for (int i = 0; 1 < pageRecord.getItemCount(); i++) {
+        for (int i = 0; i < pageRecord.getItemCount(); i++) {
             tabs.addTab(tabs.newTab());
         }
 
