@@ -112,6 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="KPH"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/speed_indicator"
         app:layout_constraintEnd_toEndOf="@+id/speed_indicator"
         app:layout_constraintStart_toStartOf="@+id/speed_indicator"
