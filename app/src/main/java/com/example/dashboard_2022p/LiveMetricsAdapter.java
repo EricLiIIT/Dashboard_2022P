@@ -47,8 +47,6 @@ public class LiveMetricsAdapter extends RecyclerView.Adapter<LiveMetricsAdapter.
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            textView = itemView.findViewById(R.id.textView);
         }
     }
 
