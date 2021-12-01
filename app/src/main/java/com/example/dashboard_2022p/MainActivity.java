@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 
 import com.example.dashboard_2022p.page.PageAdapter;
 import com.example.dashboard_2022p.page.PageRecord;
@@ -14,6 +18,8 @@ import com.example.dashboard_2022p.page.adapters.Logs;
 import com.example.dashboard_2022p.page.adapters.Profile;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,5 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Dashboard dashboard = (Dashboard) pageAdapter.getPage(PageRecord.dashboard);
         Logs logs = (Logs) pageAdapter.getPage(PageRecord.logs);
         Profile profile = (Profile) pageAdapter.getPage(PageRecord.profile);
+
     }
+
 }

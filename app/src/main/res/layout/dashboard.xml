@@ -135,6 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:text="Duty Cycle"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="@+id/duty_cycle_indicator"
         app:layout_constraintStart_toStartOf="@+id/duty_cycle_indicator"
         app:layout_constraintTop_toTopOf="@+id/duty_cycle_indicator" />
