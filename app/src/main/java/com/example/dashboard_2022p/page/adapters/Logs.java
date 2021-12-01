@@ -22,6 +22,7 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
     private ViewGroup rootView;
 
     Button btn;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @
@@ -29,53 +30,41 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
 
         rootView = (ViewGroup) inflater.inflate(R.layout.logs, container, false);
 
-        // array to be displayed
+        // String array to be appended
         String[] log_entry = {"Log 1", "Log 2", "Log 3"};
 
+        // Create a list from String Array elements
+        ArrayList<String> log_entry_list = new ArrayList<String>(Arrays.asList(log_entry));
+
+        // Rewatch video for relevant comment
         ListView listView = (ListView) rootView.findViewById(R.id.log_list);
+        Button add_log = (Button) rootView.findViewById(R.id.add_log_entry);
 
         // Array adapter is used to take what's in our array and display it on the listview.
         // Listview doesn't know how to use an array, and an array can't display itself on the view
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
-                getActivity(), android.R.layout.simple_list_item_1, log_entry
+                getActivity(), android.R.layout.simple_list_item_1, log_entry_list
         );
 
+        // DataBind ListView with items from ArrayAdapter
         listView.setAdapter(listViewAdapter);
-//        // Get reference of widgets from XML layout
-//        final ListView lv = (ListView) findViewById(R.id.lv);
-//        final Button btn = (Button) findViewById(R.id.btn);
-//
-        // Initializing a new String Array
-//        String[] fruits = new String[] {
-//                "Cape Gooseberry",
-//                "Capuli cherry"
-//        };
-//
-//        // Create a List from String Array elements
-//        List<String> fruits_list = new ArrayList<String>(Arrays.asList(fruits));
 
-//        // Create an ArrayAdapter from List
-//        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_list_item_1, fruits_list);
-//
-//        // DataBind ListView with items from ArrayAdapter
-//        lv.setAdapter(arrayAdapter);
-//
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Add new Items to List
-//                fruits_list.add("Loquat");
-//                fruits_list.add("Pear");
-//                /*
-//                    notifyDataSetChanged ()
-//                        Notifies the attached observers that the underlying
-//                        data has been changed and any View reflecting the
-//                        data set should refresh itself.
-//                 */
-////                arrayAdapter.notifyDataSetChanged();
-//            }
-//        });
+        add_log.findViewById(R.id.add_log_entry);
+        add_log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Add new Items to List
+                log_entry_list.add("Log 4");
+                log_entry_list.add("Pear");
+                /*
+                    notifyDataSetChanged ()
+                        Notifies the attached observers that the underlying
+                        data has been changed and any View reflecting the
+                        data set should refresh itself.
+                 */
+                listViewAdapter.notifyDataSetChanged();
+            }
+        });
         return rootView;
     }
 
