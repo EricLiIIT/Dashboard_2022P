@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="50dp"
         android:src="@drawable/profile_blue"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,14 +19,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"></ImageView>
+        app:layout_constraintVertical_bias="0.0">
+    </ImageView>
 
     <ImageView
         android:id="@+id/dry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="50dp"
         android:src="@drawable/profile_grey"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +35,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/wet"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintVertical_bias="0.0">
     </ImageView>
 
     <ImageView
@@ -42,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="50dp"
         android:src="@drawable/profile_red"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,23 +51,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/dry"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/endurance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        android:src="@drawable/profile_green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/turbo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintVertical_bias="0.0">
     </ImageView>
 
     <ImageView
@@ -74,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="50dp"
         android:src="@drawable/profile_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,15 +67,31 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/endurance"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintVertical_bias="0.0">
     </ImageView>
 
+    <ImageView
+        android:id="@+id/endurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/profile_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/turbo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">\
+    </ImageView>
     <!--    Labels     -->
+
     <TextView
         android:id="@+id/wet_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="WET"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -102,7 +103,7 @@
         android:id="@+id/dry_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="DRY"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -114,7 +115,7 @@
         android:id="@+id/turbo_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="TURBO"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -126,12 +127,11 @@
         android:id="@+id/endurance_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="ENDUR0"
+        android:layout_marginTop="8dp"
+        android:text="ENDURO"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/endurance"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/endurance"
         app:layout_constraintTop_toBottomOf="@+id/endurance" />
 
@@ -139,11 +139,12 @@
         android:id="@+id/agility_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="AGILITY"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/agility"
         app:layout_constraintStart_toStartOf="@+id/agility"
         app:layout_constraintTop_toBottomOf="@+id/agility" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

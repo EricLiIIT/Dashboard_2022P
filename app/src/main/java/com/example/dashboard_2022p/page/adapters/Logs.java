@@ -1,6 +1,7 @@
 package com.example.dashboard_2022p.page.adapters;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,12 +22,13 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
 
     private ViewGroup rootView;
 
-    Button btn;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @
             Nullable Bundle SavedInstanceState) {
+
+        // For logging
+        String TAG = "MyActivity";
 
         rootView = (ViewGroup) inflater.inflate(R.layout.logs, container, false);
 
@@ -37,8 +39,9 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
         ArrayList<String> log_entry_list = new ArrayList<String>(Arrays.asList(log_entry));
 
         // Rewatch video for relevant comment
+        // References views? (buttons & what not)
         ListView listView = (ListView) rootView.findViewById(R.id.log_list);
-        Button add_log = (Button) rootView.findViewById(R.id.add_log_entry);
+        Button add_log = (Button) rootView.findViewById(R.id.record_activity_btn);
 
         // Array adapter is used to take what's in our array and display it on the listview.
         // Listview doesn't know how to use an array, and an array can't display itself on the view
@@ -49,7 +52,6 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
         // DataBind ListView with items from ArrayAdapter
         listView.setAdapter(listViewAdapter);
 
-        add_log.findViewById(R.id.add_log_entry);
         add_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,11 +65,12 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
                         data set should refresh itself.
                  */
                 listViewAdapter.notifyDataSetChanged();
+                Log.i(TAG, "Recording Activity");
             }
         });
         return rootView;
     }
-
+    // TODO: add log detail page, code new class that includes log data
     @NonNull
     @Override
     public String getTitle() {

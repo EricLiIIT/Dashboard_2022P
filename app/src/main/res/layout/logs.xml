@@ -6,19 +6,21 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/add_log_entry"
-        android:layout_width="187dp"
-        android:layout_height="49dp"
+        android:id="@+id/record_activity_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginStart="10dp"
-        android:text="Add Log"
-        android:textSize="15sp"
+        android:text="Record Activity"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="@+id/log_list"
         app:layout_constraintStart_toStartOf="@+id/log_list" />
+
     <ListView
         android:id="@+id/log_list"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
-        android:layout_below="@id/add_log_entry"
+        android:layout_below="@id/record_activity_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

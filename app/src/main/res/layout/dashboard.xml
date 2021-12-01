@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    Data Container  -->
+<!--    Data Containers  -->
     <ImageView
         android:id="@+id/speed_indicator"
         android:layout_width="wrap_content"
@@ -18,7 +18,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
 
     <ImageView
         android:id="@+id/charge_indicator"
@@ -98,25 +99,21 @@
         app:layout_constraintVertical_bias="0.948">
     </ImageView>
 
-<!--    Live Data Digits    -->
-
-
-
-
-
-
 <!--    Text View Labels    -->
+
     <TextView
         android:id="@+id/speed_indicator_unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="KPH"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/speed_indicator"
         app:layout_constraintEnd_toEndOf="@+id/speed_indicator"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/speed_indicator"
         app:layout_constraintTop_toTopOf="@+id/speed_indicator"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/charge_indicator_label"
@@ -178,4 +175,101 @@
         app:layout_constraintEnd_toEndOf="@+id/menu"
         app:layout_constraintStart_toStartOf="@+id/menu"
         app:layout_constraintTop_toTopOf="@+id/menu" />
+
+<!--    Live Data Values    -->
+    <TextView
+        android:id="@+id/speed_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="150sp"
+        app:layout_constraintBottom_toBottomOf="@+id/speed_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/speed_indicator"
+        app:layout_constraintStart_toStartOf="@+id/speed_indicator"
+        app:layout_constraintTop_toTopOf="@+id/speed_indicator" />
+
+    <TextView
+        android:id="@+id/charge_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/charge_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/charge_indicator"
+        app:layout_constraintStart_toStartOf="@+id/charge_indicator"
+        app:layout_constraintTop_toTopOf="@+id/charge_indicator" />
+
+    <TextView
+        android:id="@+id/charge_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="%"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/charge_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/charge_indicator"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toEndOf="@+id/charge_val"
+        app:layout_constraintTop_toTopOf="@+id/charge_indicator"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <TextView
+        android:id="@+id/duty_cycle_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/duty_cycle_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/duty_cycle_indicator"
+        app:layout_constraintStart_toStartOf="@+id/duty_cycle_indicator"
+        app:layout_constraintTop_toTopOf="@+id/duty_cycle_indicator" />
+
+    <TextView
+        android:id="@+id/duty_cycle_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="%"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/duty_cycle_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/duty_cycle_indicator"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/duty_cycle_val"
+        app:layout_constraintTop_toTopOf="@+id/duty_cycle_indicator"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <TextView
+        android:id="@+id/current_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/current_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/current_indicator"
+        app:layout_constraintStart_toStartOf="@+id/current_indicator"
+        app:layout_constraintTop_toTopOf="@+id/current_indicator" />
+
+    <TextView
+        android:id="@+id/erpm_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/erpm_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/erpm_indicator"
+        app:layout_constraintStart_toStartOf="@+id/erpm_indicator"
+        app:layout_constraintTop_toTopOf="@+id/erpm_indicator" />
+
+    <TextView
+        android:id="@+id/rpm_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rpm_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/rpm_indicator"
+        app:layout_constraintStart_toStartOf="@+id/rpm_indicator"
+        app:layout_constraintTop_toTopOf="@+id/rpm_indicator" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
