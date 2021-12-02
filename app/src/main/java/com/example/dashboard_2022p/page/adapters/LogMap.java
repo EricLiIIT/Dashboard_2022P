@@ -14,7 +14,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-//import com.example.dashboard_2022p.databinding;
+import com.example.dashboard_2022p.databinding.LogsBinding;
 
 //public class LogMap extends AppCompatActivity {
 //
@@ -29,15 +29,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 //}
 public class LogMap extends FragmentActivity implements OnMapReadyCallback {
 
+    Intent log_intent = getIntent();
+
     private GoogleMap mMap;
-//    private ActivityMapsBinding binding;
+    private LogsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logs);
-//        binding = ActivityMapsBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
+
+        binding = LogsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
