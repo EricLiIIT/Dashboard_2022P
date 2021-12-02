@@ -27,14 +27,15 @@ public class Profile extends com.example.dashboard_2022p.page.Page {
             Nullable Bundle SavedInstanceState) {
         rootView = (ViewGroup) inflater.inflate(R.layout.profile, container, false);
 
-        String TAG = "MyActivity";
+        String TAG = "Profile.java";
 
-        ImageView wet_btn = (ImageView) rootView.findViewById(R.id.wet);
-        ImageView dry_btn = (ImageView) rootView.findViewById(R.id.dry);
-        ImageView turbo_btn = (ImageView) rootView.findViewById(R.id.turbo);
-        ImageView enduro_btn = (ImageView) rootView.findViewById(R.id.endurance);
-        ImageView agility_btn = (ImageView) rootView.findViewById(R.id.agility);
+        ImageView wet_btn = rootView.findViewById(R.id.wet);
+        ImageView dry_btn = rootView.findViewById(R.id.dry);
+        ImageView turbo_btn = rootView.findViewById(R.id.turbo);
+        ImageView enduro_btn = rootView.findViewById(R.id.endurance);
+        ImageView agility_btn = rootView.findViewById(R.id.agility);
 
+        // TODO: pair buttons with values on Teensy
         wet_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,7 +75,6 @@ public class Profile extends com.example.dashboard_2022p.page.Page {
                 Log.i(TAG,"Agility Profile Enabled");
             }
         });
-
         return rootView;
     }
 

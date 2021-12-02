@@ -1,9 +1,11 @@
 package com.example.dashboard_2022p.page.adapters;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +24,17 @@ public class Dashboard extends com.example.dashboard_2022p.page.Page {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @
             Nullable Bundle SavedInstanceState) {
         rootView = (ViewGroup) inflater.inflate(R.layout.dashboard, container, false);
+
+        // For logging
+        String TAG = "Dashboard.java";
+
+        ImageView menu_btn = rootView.findViewById(R.id.menu);
+        menu_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "Menu Button Pressed");
+            }
+        });
         return rootView;
     }
 }
