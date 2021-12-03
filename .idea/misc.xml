@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/itmd455_android/Dashboard_2022P/app/src/main/res/layout/activity_log_detail.xml" value="0.29483695652173914" />
+        <entry key="..\:/itmd455_android/Dashboard_2022P/app/src/main/res/layout/activity_log_map.xml" value="0.4041666666666667" />
         <entry key="..\:/itmd455_android/Dashboard_2022P/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/itmd455_android/Dashboard_2022P/app/src/main/res/layout/activity_maps.xml" value="0.4041666666666667" />
         <entry key="..\:/itmd455_android/Dashboard_2022P/app/src/main/res/layout/dashboard.xml" value="0.4" />
         <entry key="..\:/itmd455_android/Dashboard_2022P/app/src/main/res/layout/live_metrics.xml" value="0.38179347826086957" />
         <entry key="..\:/itmd455_android/Dashboard_2022P/app/src/main/res/layout/log_detail.xml" value="0.19655521783181357" />

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.dashboard_2022p.LogMapActivity;
 import com.example.dashboard_2022p.R;
 
 import java.util.ArrayList;
@@ -64,12 +65,12 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
                         Toast.LENGTH_SHORT).show();
 
                 // Start Map activity
-                Intent log_detail_intent = new Intent(getContext().getApplicationContext(), LogMap.class);
+                Intent logDetailIntent = new Intent(getContext().getApplicationContext(), LogMapActivity.class);
 //                Intent log_detail_intent = new Intent(getContext().getApplicationContext(), LogDetail.class);
 //                EditText editText = (EditText) rootView.findViewById(R.id.log_entry[position]);
                 // Start map activity next to log in empty space (priority)
                 // add another button to view details
-                startActivity(log_detail_intent);
+                startActivity(logDetailIntent);
             }
         });
 
