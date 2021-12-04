@@ -39,7 +39,8 @@ public class Profile extends com.example.dashboard_2022p.page.Page {
         wet_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // How to get context for toast message?
+                Toast.makeText(getContext().getApplicationContext(), "Wet Profile Enabled",
+                        Toast.LENGTH_SHORT).show();
                 Log.i(TAG,"Wet Profile Enabled");
             }
         });
@@ -47,7 +48,8 @@ public class Profile extends com.example.dashboard_2022p.page.Page {
         dry_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // How to get context for toast message?
+                Toast.makeText(getContext().getApplicationContext(), "Dry Profile Enabled",
+                        Toast.LENGTH_SHORT).show();
                 Log.i(TAG,"Dry Profile Enabled");
             }
         });
@@ -55,15 +57,18 @@ public class Profile extends com.example.dashboard_2022p.page.Page {
         turbo_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // How to get context for toast message?
+                Toast.makeText(getContext().getApplicationContext(), "PEDAL TO THE METAL",
+                        Toast.LENGTH_SHORT).show();
                 Log.i(TAG,"Pedal to the metal");
             }
         });
 
+        // Optimize battery discharge
         enduro_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // How to get context for toast message?
+                Toast.makeText(getContext().getApplicationContext(), "Enduro Profile Enabled",
+                        Toast.LENGTH_SHORT).show();
                 Log.i(TAG,"Enduro Profile Enabled");
             }
         });
@@ -71,7 +76,8 @@ public class Profile extends com.example.dashboard_2022p.page.Page {
         agility_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // How to get context for toast message?
+                Toast.makeText(getContext().getApplicationContext(), "Agility Profile Enabled",
+                        Toast.LENGTH_SHORT).show();
                 Log.i(TAG,"Agility Profile Enabled");
             }
         });

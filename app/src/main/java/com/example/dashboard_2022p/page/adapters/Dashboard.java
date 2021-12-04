@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,6 +33,8 @@ public class Dashboard extends com.example.dashboard_2022p.page.Page {
         menu_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getContext().getApplicationContext(), "Menu Button Pressed",
+                        Toast.LENGTH_SHORT).show();
                 Log.i(TAG, "Menu Button Pressed");
             }
         });
