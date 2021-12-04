@@ -1,6 +1,7 @@
 package com.example.dashboard_2022p.page.adapters;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -44,7 +45,9 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
         // Rewatch video for relevant comment
         // References views? (buttons & what not)
         ListView listView = rootView.findViewById(R.id.log_list);
-        Button add_log = rootView.findViewById(R.id.record_activity_btn);
+        Button show_map_btn = rootView.findViewById(R.id.show_map_btn);
+        Button add_log_btn = rootView.findViewById(R.id.add_log);
+        Button record_btn = rootView.findViewById(R.id.record);
 
         // Array adapter is used to take what's in our array and display it on the listview.
         // Listview doesn't know how to use an array, and an array can't display itself on the view
@@ -63,32 +66,45 @@ public class Logs extends com.example.dashboard_2022p.page.Page {
                 Toast.makeText(getContext().getApplicationContext(),
                         log_entry[position],
                         Toast.LENGTH_SHORT).show();
-
-                // Start Map activity
-                Intent logDetailIntent = new Intent(getContext().getApplicationContext(), LogMapActivity.class);
-//                Intent log_detail_intent = new Intent(getContext().getApplicationContext(), LogDetail.class);
 //                EditText editText = (EditText) rootView.findViewById(R.id.log_entry[position]);
-                // Start map activity next to log in empty space (priority)
-                // add another button to view details
-                startActivity(logDetailIntent);
             }
         });
 
-        // Record Activity
-        add_log.setOnClickListener(new View.OnClickListener() {
+        // Add Log & Show Toast
+        add_log_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add new Items to List
-                log_entry_list.add("Log 4");
-                log_entry_list.add("Pear");
+                // Add new log to list
+                log_entry_list.add("New Log");
                 /*
                     notifyDataSetChanged ()
                         Notifies the attached observers that the underlying
                         data has been changed and any View reflecting the
                         data set should refresh itself.
                  */
-                listViewAdapter.notifyDataSetChanged();
+                listViewAdapter.notifyDataSetChanged(); // You need this to update the listview live
+            }
+        });
+
+        // Show Map
+        show_map_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start Map activity
+                Intent logDetailIntent = new Intent(getContext().getApplicationContext(), LogMapActivity.class);
+                startActivity(logDetailIntent);
+                Log.i(TAG, "Displaying Map");
+            }
+        });
+
+        // Toast Message After Record Start
+        // Begin tracking GPS, battery, & ecu data here
+        record_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Log.i(TAG, "Recording Activity");
+                Toast.makeText(getContext().getApplicationContext(), "Recording",
+                        Toast.LENGTH_SHORT).show();
             }
         });
         return rootView;
